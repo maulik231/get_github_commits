@@ -1,0 +1,26 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^5.5.4"
+  },
+  "description": "Get all commits by public repository URL",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maulik231/get_github_commits.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maulik231/get_github_commits/issues"
+  },
+  "homepage": "https://github.com/maulik231/get_github_commits#readme"
+}
