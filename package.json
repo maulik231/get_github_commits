@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "get_github_commits",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -12,7 +12,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "lerna run tsc && lerna publish"
+    "postinstall": "lerna bootstrap",
+    "install:ui": "cd ./packages/frontend && npm install",
+    "start:ui": "cd ./packages/frontend && npm run serve",
+    "build:ui": "cd ./packages/frontend && npm run build",
+    "install:api": "cd ./packages/backend && composer install",
+    "api:key": "cd ./packages/backend && php artisan key:generate",
+    "start:api": "cd ./packages/backend && php artisan serve",
+    "optimize:api": "cd ./packages/backend && php artisan optimize:clear"
   },
   "repository": {
     "type": "git",
@@ -20,8 +27,8 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/maulik231/get_github_commits/issues"
-  },
-  "homepage": "https://github.com/maulik231/get_github_commits#readme"
+  "homepage": "https://github.com/maulik231/get_github_commits#readme",
+  "dependencies": {
+    "autoprefixer": "10.4.5"
+  }
 }
