@@ -1,5 +1,5 @@
 <template>
- <div class="container">
+  <div class="container">
     <div class="row">
       <div class="col-12 text-left">
         <div class="about">
@@ -23,12 +23,12 @@
             </tr>
           </table>
             <p class="text-center" v-if="!commitdatas"><b>Not found data</b></p>
-        <nav aria-label="Page navigation example">
-        <ul class="pagination" v-if="nexturl || prevurl"  >
-            <li class="page-item"><a  style="cursor: pointer;" class="page-link" @click="prev(prevurl)">Previous</a></li>
-            <li class="page-item"><a  style="cursor: pointer;" class="page-link"  @click="next(nexturl)">Next</a></li>
-        </ul>
-</nav>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination" v-if="nexturl || prevurl"  >
+              <li class="page-item"><a  style="cursor: pointer;" class="page-link" @click="prev(prevurl)">Previous</a></li>
+              <li class="page-item"><a  style="cursor: pointer;" class="page-link"  @click="next(nexturl)">Next</a></li>
+            </ul> 
+          </nav>
         </div>
       </div>
     </div>
