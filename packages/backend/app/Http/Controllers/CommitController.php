@@ -60,7 +60,7 @@ class CommitController extends Controller
     }
 
     public function getData(){
-        $repoUrl_data =  RepoUrl::orderBy('id','DESC')->get();
+        $repoUrl_data =  RepoUrl::get();
         if(count($repoUrl_data)>0){
             return response(['repo_url' => $repoUrl_data, 'status' => 200, 'message' => 'repo data retrieved successfully']);
         }

@@ -19,8 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/getcommitdata',[CommitController::class,'index']);
-Route::get('/commitdatas/{repo_id}',[CommitController::class,'getcommitdata']);
-Route::get('/all-commit-data',[CommitController::class,'show']);
-Route::post('/repo-url',[CommitController::class,'repoUrl']);
-Route::get('/repourldata',[CommitController::class,'getData']);
+Route::middleware(['cors'])->group(function () {
+    Route::get('/getcommitdata',[CommitController::class,'index']);
+    Route::get('/commitdatas/{repo_id}',[CommitController::class,'getcommitdata']);
+    Route::get('/all-commit-data',[CommitController::class,'show']);
+    Route::post('/repo-url',[CommitController::class,'repoUrl']);
+    Route::get('/repourldata',[CommitController::class,'getData']);
+});
